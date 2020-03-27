@@ -1,24 +1,287 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="o9o-us-7kn">
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="MLingWaiFHK-Light.otf">
+            <string>MLingWaiFHK-Light</string>
+        </array>
+    </customFonts>
     <scenes>
-        <!--View Controller-->
+        <!--Hosting Controller-->
+        <scene sceneID="7lt-Wa-BPI">
+            <objects>
+                <hostingController id="Zcc-kl-CmL" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UPn-WB-FlE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2864" y="-651"/>
+        </scene>
+        <!--主頁-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="主頁" id="BYZ-38-t0r" customClass="ViewController" customModule="EBook_Hw1" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zhy-jW-ovY">
+                                <rect key="frame" x="0.0" y="88" width="414" height="788"/>
+                                <connections>
+                                    <segue destination="Zcc-kl-CmL" kind="embed" destinationCreationSelector="showImage2:" id="O84-yS-FyH"/>
+                                </connections>
+                            </containerView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Accusefive" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uXc-LV-x9y">
+                                <rect key="frame" x="115" y="704" width="279" height="75"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="279" id="1lt-iT-MwY"/>
+                                    <constraint firstAttribute="height" constant="75" id="maX-AM-7Jz"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="60"/>
+                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bU4-VQ-Evw">
+                                <rect key="frame" x="20" y="128" width="80.666666666666671" height="69"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <color key="tintColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <state key="normal" image="music.house" catalog="system">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleShadowColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="61" scale="default" weight="thin"/>
+                                </state>
+                                <connections>
+                                    <segue destination="byK-7c-Bsy" kind="show" destinationCreationSelector="showtheNext:" id="Q9i-hJ-7r1"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="30" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MmT-VD-krl">
+                                <rect key="frame" x="0.0" y="108" width="414" height="352"/>
+                                <string key="text">我們都在同一個維度下，
+為自己所喜愛的事物，
+學珍重，
+保初衷。
+可能一樣討厭猜忌，
+或者一樣喜愛純粹。
+
+無論如何，
+你就是你呀
+
+生氣的你，
+鬱悶的你，
+可愛的你。
+願我們都能為有彈性的自己。
+對於失去都視為一種珍惜。</string>
+                                <fontDescription key="fontDescription" name="MLingWaiFHK-Light" family="MLingWaiFHK" pointSize="23"/>
+                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.30976641179999997" green="0.30982545020000002" blue="0.30976271630000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="MmT-VD-krl" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="1XQ-DO-gP2"/>
+                            <constraint firstItem="Zhy-jW-ovY" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="3ee-lL-sKL"/>
+                            <constraint firstItem="MmT-VD-krl" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="Kyr-WF-SST"/>
+                            <constraint firstItem="Zhy-jW-ovY" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="QEz-kX-EO7"/>
+                            <constraint firstItem="uXc-LV-x9y" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="RW8-iR-Zv7"/>
+                            <constraint firstItem="bU4-VQ-Evw" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="40" id="hvQ-xe-aRd"/>
+                            <constraint firstItem="Zhy-jW-ovY" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="ksZ-zP-6zS"/>
+                            <constraint firstAttribute="bottom" secondItem="Zhy-jW-ovY" secondAttribute="bottom" constant="20" symbolic="YES" id="o96-YI-zkY"/>
+                            <constraint firstItem="bU4-VQ-Evw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="t47-hO-DeN"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="uXc-LV-x9y" secondAttribute="bottom" constant="34" id="tuh-f5-1L9"/>
+                            <constraint firstItem="MmT-VD-krl" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="ylR-bf-7DG"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" title="吿五人" id="Ao8-Cq-wM4">
+                        <barButtonItem key="backBarButtonItem" title="返回" id="YX4-Ko-tGm"/>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="2865" y="96.25"/>
+        </scene>
+        <!--簡介-->
+        <scene sceneID="pxm-Tf-n2j">
+            <objects>
+                <viewController id="wlT-3Y-0aC" customClass="ViewController" customModule="EBook_Hw1" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="mu7-yD-w33">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="P7Y-ia-3Dt">
+                                <rect key="frame" x="20" y="83" width="374" height="730"/>
+                                <connections>
+                                    <segue destination="BYq-ZH-hzg" kind="embed" destinationCreationSelector="showImage:" id="cRR-7D-RlG"/>
+                                </connections>
+                            </containerView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="告五人" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Poe-rY-h9g">
+                                <rect key="frame" x="20" y="83" width="213" height="66"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="66" id="NTM-A3-No0"/>
+                                    <constraint firstAttribute="width" constant="213" id="lFM-fV-Z4P"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="MLingWaiFHK-Light" family="MLingWaiFHK" pointSize="69"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qm9-L3-twC">
+                                <rect key="frame" x="34" y="167" width="360" height="646"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <string key="text">台灣獨立樂團，
+目前團員為
+男主唱兼木吉他手潘雲安、
+女主唱犬青及鼓手哲謙。
+
+不設限曲風的音樂風格，
+展現告五人多元的音樂面向，
+作品類型涵蓋Folk Rock、Pop Rock、Indie Rock、Synth pop、Dance Pop、Ballad、Electro、New wave。
+
+
+主唱潘雲安、犬青男女雙主唱交錯渲染的迷人聲線，
+帶給聽眾療癒的感染力和強烈的吸引力。
+</string>
+                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" name="PingFangTC-Regular" family="PingFang TC" pointSize="19"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Poe-rY-h9g" firstAttribute="leading" secondItem="eld-ZT-3XC" secondAttribute="leading" constant="20" id="WLv-0d-7wD"/>
+                            <constraint firstItem="qm9-L3-twC" firstAttribute="leading" secondItem="eld-ZT-3XC" secondAttribute="leading" constant="34" id="YOU-aT-hmI"/>
+                            <constraint firstItem="Poe-rY-h9g" firstAttribute="top" secondItem="eld-ZT-3XC" secondAttribute="top" constant="39" id="YhL-lb-Rkq"/>
+                            <constraint firstItem="qm9-L3-twC" firstAttribute="bottom" secondItem="eld-ZT-3XC" secondAttribute="bottom" id="bpd-1z-Blp"/>
+                            <constraint firstItem="qm9-L3-twC" firstAttribute="top" secondItem="Poe-rY-h9g" secondAttribute="bottom" constant="18" id="bvE-Rv-rST"/>
+                            <constraint firstItem="P7Y-ia-3Dt" firstAttribute="bottom" secondItem="eld-ZT-3XC" secondAttribute="bottom" id="eJ3-DM-3Cb"/>
+                            <constraint firstItem="P7Y-ia-3Dt" firstAttribute="leading" secondItem="mu7-yD-w33" secondAttribute="leadingMargin" id="fqX-IR-n80"/>
+                            <constraint firstItem="eld-ZT-3XC" firstAttribute="trailing" secondItem="qm9-L3-twC" secondAttribute="trailing" constant="20" id="ugS-zE-ayl"/>
+                            <constraint firstItem="P7Y-ia-3Dt" firstAttribute="centerY" secondItem="mu7-yD-w33" secondAttribute="centerY" id="vPb-i1-jEF"/>
+                            <constraint firstItem="P7Y-ia-3Dt" firstAttribute="centerX" secondItem="mu7-yD-w33" secondAttribute="centerX" id="yK9-Xv-zxo"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="eld-ZT-3XC"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="簡介" image="info.circle" catalog="system" id="4if-gu-uDV"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lK8-Y5-OLg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1955.072463768116" y="835.04464285714278"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="1EN-E2-b6O">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="o9o-us-7kn" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" tag="2" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="XzY-gv-NLW">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" red="0.51467636348170065" green="0.78799439107114255" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="tintColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="selectedImageTintColor" red="0.20392156862745098" green="0.28627450980392155" blue="0.41960784313725491" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="6yj-up-LJm" kind="relationship" relationship="viewControllers" id="bYS-Xc-Ylh"/>
+                        <segue destination="wlT-3Y-0aC" kind="relationship" relationship="viewControllers" id="uMr-Li-Fhv"/>
+                        <segue destination="EpT-9j-bdV" kind="relationship" relationship="viewControllers" id="2f4-ch-DE0"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wws-St-Rn0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1047.8260869565217" y="100.44642857142857"/>
+        </scene>
+        <!--Hosting Controller-->
+        <scene sceneID="Git-E5-RdH">
+            <objects>
+                <hostingController id="BYq-ZH-hzg" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HNp-PU-GCT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2784" y="836"/>
+        </scene>
+        <!--專輯列表-->
+        <scene sceneID="5cU-g7-l87">
+            <objects>
+                <hostingController id="byK-7c-Bsy" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" title="專輯列表" id="nv0-uC-r0K">
+                        <barButtonItem key="backBarButtonItem" title="返回" id="hIq-2b-PD9"/>
+                    </navigationItem>
+                </hostingController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yhB-yW-wZm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3721.739130434783" y="96.428571428571431"/>
+        </scene>
+        <!--主頁-->
+        <scene sceneID="lQq-cV-xqB">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="6yj-up-LJm" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="主頁" image="house" catalog="system" id="U51-d5-67S"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Sog-Hq-u4x">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="n3y-yk-iyK"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZkK-dY-Boq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1955.072463768116" y="97.098214285714278"/>
+        </scene>
+        <!--連結-->
+        <scene sceneID="gV1-3F-TzM">
+            <objects>
+                <viewController id="EpT-9j-bdV" customClass="ViewController" customModule="EBook_Hw1" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="pFP-Eq-axY">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tqw-bc-iU2">
+                                <rect key="frame" x="20" y="83" width="374" height="730"/>
+                                <connections>
+                                    <segue destination="EaX-JZ-2RO" kind="embed" destinationCreationSelector="showLink:" id="Gi9-zr-46g"/>
+                                </connections>
+                            </containerView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="社群連結" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hwb-41-wHQ">
+                                <rect key="frame" x="16" y="83" width="276" height="71"/>
+                                <fontDescription key="fontDescription" name="MLingWaiFHK-Light" family="MLingWaiFHK" pointSize="69"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="hwb-41-wHQ" firstAttribute="top" secondItem="PRj-SL-5Aq" secondAttribute="top" constant="39" id="9c2-dt-jX0"/>
+                            <constraint firstItem="tqw-bc-iU2" firstAttribute="centerY" secondItem="pFP-Eq-axY" secondAttribute="centerY" id="Nod-Mh-fQb"/>
+                            <constraint firstItem="tqw-bc-iU2" firstAttribute="bottom" secondItem="PRj-SL-5Aq" secondAttribute="bottom" id="qKw-9w-aCm"/>
+                            <constraint firstItem="tqw-bc-iU2" firstAttribute="centerX" secondItem="pFP-Eq-axY" secondAttribute="centerX" id="vqk-xv-ZJ1"/>
+                            <constraint firstItem="tqw-bc-iU2" firstAttribute="leading" secondItem="pFP-Eq-axY" secondAttribute="leadingMargin" id="wh6-kw-TXX"/>
+                            <constraint firstItem="hwb-41-wHQ" firstAttribute="leading" secondItem="PRj-SL-5Aq" secondAttribute="leading" constant="16" id="xpe-fR-5LJ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="PRj-SL-5Aq"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="連結" image="link.circle" catalog="system" id="iTH-0n-4df"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9FZ-0K-GAD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1044.9275362318842" y="835.59782608695662"/>
+        </scene>
+        <!--Hosting Controller-->
+        <scene sceneID="lkl-GC-fJx">
+            <objects>
+                <hostingController id="EaX-JZ-2RO" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="U2M-G9-jOf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1029" y="1514"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="house" catalog="system" width="64" height="54"/>
+        <image name="info.circle" catalog="system" width="64" height="60"/>
+        <image name="link.circle" catalog="system" width="64" height="60"/>
+        <image name="music.house" catalog="system" width="64" height="52"/>
+    </resources>
+    <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
 </document>
